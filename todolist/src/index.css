@@ -1,0 +1,170 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  font-size: 24px;
+  color: #17a2b8;
+  margin-bottom: 20px;
+}
+
+/* Todo Form */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #17a2b8;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #138496;
+}
+
+/* Todo Filter */
+.todo-filter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.todo-filter label {
+  font-size: 14px;
+  margin-right: 10px;
+  color: #495057;
+}
+
+select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  font-size: 14px;
+}
+
+/* Todo List */
+.todo-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Todo Item (Card) */
+.todo-item {
+  background-color: #d4edda;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: left;
+  position: relative;
+}
+
+.todo-item p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #495057;
+}
+
+.todo-item select {
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  background-color: white;
+}
+
+button {
+  width: 80px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.edit-btn {
+  background-color: #28a745;
+  margin-right: 10px;
+}
+
+button.edit-btn:hover {
+  background-color: #218838;
+}
+
+button.delete-btn {
+  background-color: #dc3545;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Status Dropdown */
+select {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Status Styles */
+select option[value="Completed"] {
+  background-color: #28a745;
+  color: white;
+}
+
+select option[value="Not Completed"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-item {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .todo-list {
+      flex-direction: column;
+  }
+
+  form {
+      flex-direction: column;
+      gap: 15px;
+  }
+}
